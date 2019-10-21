@@ -7,11 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox x:Name="lstcolores" HorizontalAlignment="Left" Height="365" Margin="26,22,0,0" VerticalAlignment="Top" Width="149">
-            <ListBoxItem x:Name=""
-                text= "opcion 1"
-            
+        <ListBox x:Name="lstColores" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="149">
+            <!--<ListBoxItem>Opción 1</ListBoxItem>
+            <ListBoxItem>Opción 2</ListBoxItem>
+            <ListBoxItem>Opción 3</ListBoxItem>-->
         </ListBox>
+        <TextBox x:Name="txtColor" HorizontalAlignment="Left" Height="23" Margin="177,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnNuevoColor" Content="Nuevo Color" HorizontalAlignment="Left" Margin="310,13,0,0" VerticalAlignment="Top" Width="75" Click="BtnNuevoColor_Click"/>
 
     </Grid>
 </Window>

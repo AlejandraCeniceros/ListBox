@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
 
 namespace ListBox
 {
@@ -20,11 +21,27 @@ namespace ListBox
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        ObservableCollection<string> Colores =
+            new ObservableCollection<string>();
+
         public MainWindow()
         {
             InitializeComponent();
+            Colores.Add("rojo");
+            Colores.Add("naranja");
+            Colores.Add("amarillo");
+            Colores.Add("verde");
+
+            lstColores.ItemsSource = Colores;
+
         }
 
-        privatevoid BtnNuevoColor_Click(object)
+        private void BtnNuevoColor_Click(object sender, RoutedEventArgs e)
+        {
+            Colores.Add(txtColor.Text);
+            txtColor.Text = "";
+
+        }
     }
 }
